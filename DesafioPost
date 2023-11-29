@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "80e17aa0-28c5-4fc0-8b6d-c0620ffb386b",
+		"name": "Desafio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31163961"
+	},
+	"item": [
+		{
+			"name": "ADM",
+			"item": [
+				{
+					"name": "localhost:3000/Turmas",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "Rodrigo",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/login/Turmas",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login",
+								"Turmas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/CadastrarTurma",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5vbWUiOiJGZWxpcGUiLCJ0aXBvVXNlciI6ImFkbWluIn0sImlhdCI6MTcwMDM5ODIzNywiZXhwIjoxNzAwNDAxODM3fQ.sVOTJHyDYKPFlaXXxXGKC9LyooZNPGPYeeYWjJ9NB3o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\"userID\":\"4\",\r\n\"nome_turma\": \"Turmateste\",\r\n\"id_turno\":2,\r\n\"id_disciplina\":2, \r\n\"id_professor\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/login/CadastrarTurma",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login",
+								"CadastrarTurma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/private/deletarTurma",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5vbWUiOiJGZWxpcGUiLCJ0aXBvVXNlciI6ImFkbWluIn0sImlhdCI6MTcwMDM5NTYzNSwiZXhwIjoxNzAwMzk5MjM1fQ.QS3pSgF2rHk96a7EtJsgOZhH4u7fcp2CGAbK6K1ujMM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\"userID\":\"4\",\r\n\"nome_turma\": \"Turmateste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/login/deletarTurma",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login",
+								"deletarTurma"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Aluno",
+			"item": [
+				{
+					"name": "localhost:3000/CadastrarAluno",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5vbWUiOiJSb2RyaWdvIiwidGlwb1VzZXIiOiJhbHVubyJ9LCJpYXQiOjE3MDAzOTcxMDEsImV4cCI6MTcwMDQwMDcwMX0.BMn5S2L_X4K4gG2rm8lhFsTH0lC3jgCln5SlIlcPqjg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"userID\":1,\r\n\"id_aluno\": 1,\r\n\"id_turma\":4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/login/Matricular",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login",
+								"Matricular"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/AlunosCadastrados",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5vbWUiOiJSb2RyaWdvIiwidGlwb1VzZXIiOiJhbHVubyJ9LCJpYXQiOjE3MDAzOTY2MjksImV4cCI6MTcwMDQwMDIyOX0.7MQShIRcEwiznIpGO2QH2YqpO1ew5TJZfHpIgk6XqtA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroTurma\":14\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/login/ExibeMatriculas",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login",
+								"ExibeMatriculas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "localhost:3000/login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "abacaxi",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Felipe",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,12 @@
+Nessa pasta teremos o arquivo sql para importa o banco de dados;
+O arquivo DesafioPost para importa a configuração do postman utilizada para o teste;
+
+Exemplo de informação registrada no banco de dados:
+
+Tipo admin:
+Username : Felipe 
+Password: abacaxi
+
+Tipo aluno
+Username: Rodrigo
+Password: 123

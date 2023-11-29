@@ -1,5 +1,5 @@
 
-*Projeto de Desenvolvimento de Sistema de Atendimento e Matrículas para Instituição de Ensino*
+*Projeto de Desenvolvimento de Sistema de Matrículas para Instituição de Ensino*
 
 Este projeto visa criar um sistema robusto de gerenciamento acadêmico para uma instituição de ensino, inspirado no ambiente da Unisinos.
 O escopo abrange a construção do back-end utilizando as tecnologias e conhecimentos adquiridos durante o curso.
